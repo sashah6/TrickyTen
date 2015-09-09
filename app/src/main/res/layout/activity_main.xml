@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/guess_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your next guess"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit my guess"
+        android:onClick="userInput"
+        android:layout_toEndOf="@id/guess_edit_text"
+        android:layout_toRightOf="@id/guess_edit_text"/>
+    <TextView
+        android:id="@+id/my_guess_text"
+        android:text="My Guess: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submit_button"/>
+    <TextView
+        android:id="@+id/my_guess_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:onClick="lastGuess()"
+        android:layout_toRightOf="@id/my_guess_text"
+        android:layout_below="@id/submit_button"/>
+    <TextView
+        android:id="@+id/computer_guess_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Guess: "
+        android:layout_below="@id/submit_button"
+        android:layout_toRightOf="@id/my_guess_text_view"
+        />
+    <TextView
+        android:id="@+id/computer_guess_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_below="@id/submit_button"
+        android:layout_toRightOf="@id/computer_guess_text"
+        />
+    <TextView
+        android:id="@+id/game_over_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Game Over. You "
+        android:visibility="invisible"/>
+
+</RelativeLayout>
